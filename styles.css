@@ -92,9 +92,22 @@ nav {
   font-size: 2.8rem;
   margin-bottom: 2.5rem;
   color: #2c3e50;
-  border: 2px solid #00aaff;
-  box-shadow: 3px 3px 2 rgba(0,0,0,0.1);
-  border-radius: 8px;
+  text-shadow: 3px 3px 5px rgba(63, 63, 135, 0.5);
+ }
+
+ .section h2 span {
+  position: relative;
+  z-index: 1;
+ }
+
+ .section h2 span::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #00aaff;
+  z-index: -1;
+  transform: translateY(0.12em) scaleY(0.75);
+  border-radius: 3px;
 }
 
 /* Skills */
@@ -166,3 +179,10 @@ footer {
   .hero h1 { font-size: 2.8rem; }
 }
 
+.about-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 25%;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+}
